@@ -1,12 +1,13 @@
-# from django.urls import path, include
-# from rest_framework.routers import DefaultRouter
-# from .views import PetaniViewSet, PanenanViewSet, TanamanViewSet
+from django.urls import path
+from farming_v2 import views
 
-# router = DefaultRouter()
-# router.register(r'petani', PetaniViewSet)
-# router.register(r'panenan', PanenanViewSet)
-# router.register(r'tanaman', TanamanViewSet)
+urlpatterns = [
+    path('petani/', views.petani_list),
+    path('tanaman/', views.tanaman_list),
+    path('panenan/', views.panenan_list),
+    path('petani/<int:pk>/', views.petani_detail),
+    path('tanaman/<int:pk>/', views.tanaman_detail),
+    path('panenan/<int:pk>/', views.panenan_detail),
+    
+]
 
-# urlpatterns = [
-#     path('', include(router.urls)),
-# ]
