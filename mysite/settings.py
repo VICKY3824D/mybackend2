@@ -31,13 +31,13 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    "farming.apps.FarmingConfig",
+    "farming_v2.apps.FarmingConfig",
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -79,7 +79,7 @@ DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
         "OPTIONS": {
-            "read_default_file": "/media/vidky/DATA/Python/mybackend/my.cnf",
+            "read_default_file": "/media/vidky/DATA/Development/backendPertanian?/my.cnf",
             "init_command": "SET default_storage_engine=INNODB",
         },
     }
@@ -108,13 +108,16 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'id'  # Bahasa Indonesia
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Jakarta'  # Zona waktu Indonesia
 
-USE_I18N = True
+USE_I18N = True  # Mengaktifkan Internationalization
 
-USE_TZ = True
+USE_L10N = True  # Mengaktifkan Localization
+
+USE_TZ = True  # Mengaktifkan pengelolaan zona waktu
+
 
 
 # Static files (CSS, JavaScript, Images)
